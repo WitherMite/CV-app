@@ -1,4 +1,4 @@
-import "../styles/Cv-app.css";
+import "../styles/CV-app.css";
 
 // generates the app based on some config obj
 export default function CvApp() {
