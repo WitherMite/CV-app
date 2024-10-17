@@ -1,10 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
+import CvApp from "./components/CV-app.jsx";
 import "./index.css";
 
+// TODO: pass a config obj to App from a json file
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <CvApp />
   </StrictMode>
 );
