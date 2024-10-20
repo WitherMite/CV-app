@@ -13,9 +13,13 @@ export default function FormSection() {
         inputType="text"
         inputValue="yep"
       ></InputField>
-      <InputField labelText="This is a test2" inputId="test2">
-        <textarea name="2" id="test2"></textarea>
-      </InputField>
+      <InputField
+        labelText="This is a test2"
+        inputName="2"
+        inputId="test2"
+        inputType="textarea"
+        inputValue="yep"
+      ></InputField>
     </fieldset>
   );
 }

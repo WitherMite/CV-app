@@ -7,13 +7,11 @@ export default function InputField({
   inputName,
   inputValue,
   inputType,
-  children,
 }) {
   return (
     <div className="inputField">
       <label htmlFor={inputId}>{labelText}</label>
       <FormControl
-        controlElement={children}
         inputId={inputId}
         inputName={inputName}
         inputType={inputType}
