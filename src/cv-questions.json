@@ -2,7 +2,17 @@
   {
     "id": 0,
     "title": "General Info",
-    "fields": []
+    "fields": [
+      {
+        "id": 3,
+        "label": "Name:",
+        "inputId": "genInfoName",
+        "type": "text",
+        "name": "candidateName",
+        "defaultValue": ""
+      },
+      {}
+    ]
   },
   {
     "id": 1,
