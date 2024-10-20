@@ -1,11 +1,11 @@
 import InputField from "./Input-field.jsx";
 
-// takes in an obj representing questions to create a fieldset
+// takes in an array representing questions to create a fieldset
 // has a flag prop to allow generating a repeated subsection with a button (for edu/work exp)
 // if submitted, fieldset is hidden, disabled, and replaced with an element containing submitted info
-export default function FormSection() {
+export default function FormSection({ isSubmitted }) {
   return (
-    <fieldset>
+    <fieldset disabled={isSubmitted}>
       <InputField
         labelText="This is a test"
         inputName="1"
