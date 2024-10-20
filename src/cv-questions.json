@@ -8,10 +8,17 @@
         "label": "Name:",
         "inputId": "genInfoName",
         "type": "text",
-        "name": "candidateName",
+        "name": "name",
         "defaultValue": ""
       },
-      {}
+      {
+        "id": 4,
+        "label": "Email:",
+        "inputId": "genInfoName",
+        "type": "email",
+        "name": "email",
+        "defaultValue": ""
+      }
     ]
   },
   {

@@ -1,9 +1,9 @@
-// TODO: change to use controlled components
 export default function FormControl({
   inputId,
   inputName,
   inputValue,
   inputType,
+  onChange,
 }) {
   switch (inputType) {
     // add more cases as needed, would be a waste of time otherise I think
@@ -13,6 +13,7 @@ export default function FormControl({
           name={inputName}
           id={inputId}
           defaultValue={inputValue}
+          onChange={onChange}
         ></textarea>
       );
     default:
@@ -22,6 +23,7 @@ export default function FormControl({
           id={inputId}
           name={inputName}
           defaultValue={inputValue}
+          onChange={onChange}
         />
       );
   }

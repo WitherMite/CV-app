@@ -14,7 +14,8 @@ export default function FormSection({ fields, title, isSubmitted }) {
           inputName={field.name}
           inputId={field.inputId}
           inputType={field.type}
-          inputValue={field.defaultValue}
+          defaultValue={field.defaultValue}
+          isSubmitted={isSubmitted}
         ></InputField>
       ))}
     </fieldset>
