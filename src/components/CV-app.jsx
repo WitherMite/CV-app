@@ -5,15 +5,16 @@ import "../styles/CV-app.css";
 // generates the app based on some config obj
 export default function CvApp({ structureConfig }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  console.table(structureConfig);
   return (
     <form className="cv-app">
-      {/* gen info */}
-      <FormSection isSubmitted={isSubmitted}></FormSection>
-      {/* education */}
-      <FormSection isSubmitted={isSubmitted}></FormSection>
-      {/* work exp */}
-      <FormSection isSubmitted={isSubmitted}></FormSection>
+      {structureConfig.map((section) => (
+        <FormSection
+          key={section.id}
+          fields={section.fields}
+          title={section.title}
+          isSubmitted={isSubmitted}
+        ></FormSection>
+      ))}
       <button
         className="submit-cv"
         type="button"
