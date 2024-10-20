@@ -1,5 +1,6 @@
 import FormControl from "./Form-control.jsx";
 import { useState } from "react";
+import "../styles/input-field.css";
 
 //  creates a prop customizable label/form control pair
 export default function InputField({
@@ -11,25 +12,25 @@ export default function InputField({
   isSubmitted,
 }) {
   const [value, setValue] = useState(defaultValue);
-
-  if (!isSubmitted)
-    return (
-      <div className="inputField">
+  return (
+    <>
+      <div className={"input-field" + (isSubmitted ? " hidden-field" : "")}>
         <label htmlFor={inputId}>{labelText}</label>
         <FormControl
           inputId={inputId}
           inputName={inputName}
           inputType={inputType}
           inputValue={value}
+          hidden={isSubmitted}
           onChange={(e) => setValue(e.target.value)}
         ></FormControl>
       </div>
-    );
-
-  return (
-    <section className="disabledInputField">
-      <h3>{labelText}</h3>
-      <p>{value}</p>
-    </section>
+      {isSubmitted && (
+        <section className="disabled-input-field">
+          <h3>{labelText}</h3>
+          <p>{value}</p>
+        </section>
+      )}
+    </>
   );
 }

@@ -3,6 +3,7 @@ export default function FormControl({
   inputName,
   inputValue,
   inputType,
+  hidden,
   onChange,
 }) {
   switch (inputType) {
@@ -13,6 +14,7 @@ export default function FormControl({
           name={inputName}
           id={inputId}
           defaultValue={inputValue}
+          hidden={hidden}
           onChange={onChange}
         ></textarea>
       );
@@ -23,6 +25,7 @@ export default function FormControl({
           id={inputId}
           name={inputName}
           defaultValue={inputValue}
+          hidden={hidden}
           onChange={onChange}
         />
       );

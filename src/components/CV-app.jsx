@@ -1,12 +1,24 @@
 import FormSection from "./Form-section.jsx";
 import { useState } from "react";
-import "../styles/CV-app.css";
 
 // generates the app based on some config obj
-export default function CvApp({ structureConfig }) {
+// can pass a callback function to handle form submission
+export default function CvApp({
+  structureConfig,
+  action = "",
+  submitCallback = () => {},
+}) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   return (
-    <form className="cv-app">
+    <form
+      className="cv-app"
+      action={action}
+      onSubmit={(e) => {
+        e.preventDefault();
+        setIsSubmitted(true);
+        submitCallback(e.target);
+      }}
+    >
       {structureConfig.map((section) => (
         <FormSection
           key={section.id}
@@ -15,13 +27,7 @@ export default function CvApp({ structureConfig }) {
           isSubmitted={isSubmitted}
         ></FormSection>
       ))}
-      <button
-        className="submit-cv"
-        type="button"
-        onClick={() => setIsSubmitted(true)}
-      >
-        Submit
-      </button>
+      <button className="submit-cv">Submit</button>
       <button
         className="edit-cv"
         type="button"
