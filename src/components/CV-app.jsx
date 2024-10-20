@@ -2,7 +2,8 @@ import FormSection from "./Form-section.jsx";
 import "../styles/CV-app.css";
 
 // generates the app based on some config obj
-export default function CvApp() {
+export default function CvApp({ structureConfig }) {
+  console.table(structureConfig);
   return (
     <form className="cv-app">
       {/* gen info */}
