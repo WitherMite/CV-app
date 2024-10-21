@@ -10,33 +10,32 @@ export default function FormSection({
   isSubmitted,
   repeatable,
 }) {
-  const [subsets, setSubsets] = useState([{ fields, id: crypto.randomUUID() }]);
+  const [subsetIds, setSubsetIds] = useState([crypto.randomUUID()]);
 
-  // shallow copies should be fine, the nested objects' values wont ever change
   function addSubset() {
-    setSubsets([...subsets, { fields, id: crypto.randomUUID() }]);
+    setSubsetIds([...subsetIds, crypto.randomUUID()]);
   }
 
-  function removeSubset(deletedSubset) {
-    const subsetsNext = subsets.filter((subset) => subset !== deletedSubset);
-    setSubsets(subsetsNext);
+  function removeSubset(deletedId) {
+    const subsetIdsNext = subsetIds.filter((id) => id !== deletedId);
+    setSubsetIds(subsetIdsNext);
   }
 
   return (
     <fieldset disabled={isSubmitted}>
       <legend>{title}</legend>
-      {subsets.map((subset, i) => {
+      {subsetIds.map((id, i) => {
         const deleteBtn = repeatable && (
-          <button type="button" onClick={() => removeSubset(subset)}>
+          <button type="button" onClick={() => removeSubset(id)}>
             -
           </button>
         );
 
         return (
           <Subset
-            key={subset.id}
+            key={id}
             isSubmitted={isSubmitted}
-            fields={subset.fields}
+            fields={fields}
             deleteBtn={i > 0 && deleteBtn}
           ></Subset>
         );
