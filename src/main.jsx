@@ -14,6 +14,10 @@ function sendForm(form) {
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <CvApp structureConfig={cvQuestions} submitCallback={sendForm} />
+    <CvApp
+      structureConfig={cvQuestions}
+      action="./index.html"
+      submitCallback={sendForm}
+    />
   </StrictMode>
 );

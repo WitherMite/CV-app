@@ -5,7 +5,7 @@ import { useState } from "react";
 // can pass a callback function to handle form submission
 export default function CvApp({
   structureConfig,
-  action = "",
+  action,
   submitCallback = () => {},
 }) {
   const [isSubmitted, setIsSubmitted] = useState(false);
