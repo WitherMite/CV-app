@@ -36,6 +36,7 @@ export default function FormSection({
             key={id}
             isSubmitted={isSubmitted}
             fields={fields}
+            index={i}
             deleteBtn={i > 0 && deleteBtn}
           ></Subset>
         );
@@ -49,15 +50,16 @@ export default function FormSection({
   );
 }
 
-function Subset({ isSubmitted, fields, deleteBtn }) {
+function Subset({ isSubmitted, fields, deleteBtn, index }) {
+  const suffix = index > 0 ? "-" + (index + 1) : "";
   return (
     <div className="field-subset-container">
       {fields.map((field) => (
         <InputField
           key={field.id}
           labelText={field.label}
-          inputName={field.name}
-          inputId={field.inputId}
+          inputName={field.name + suffix}
+          inputId={field.inputId + suffix}
           inputType={field.type}
           defaultValue={field.defaultValue}
           isSubmitted={isSubmitted}
