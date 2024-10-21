@@ -3,6 +3,7 @@ import { useState } from "react";
 import "../styles/input-field.css";
 
 //  creates a prop customizable label/form control pair
+// if submitted, field is hidden, disabled, and replaced with an element containing submitted info
 export default function InputField({
   labelText,
   inputId,
