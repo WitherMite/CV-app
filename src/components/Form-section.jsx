@@ -31,13 +31,9 @@ export default function FormSection({
         );
 
         return (
-          <Subset
-            key={id}
-            isSubmitted={isSubmitted}
-            fields={fields}
-            index={i}
-            deleteBtn={i > 0 && deleteBtn}
-          ></Subset>
+          <Subset key={id} isSubmitted={isSubmitted} fields={fields} index={i}>
+            {i > 0 && deleteBtn}
+          </Subset>
         );
       })}
       {repeatable && (
@@ -49,7 +45,7 @@ export default function FormSection({
   );
 }
 
-function Subset({ isSubmitted, fields, deleteBtn, index }) {
+function Subset({ isSubmitted, fields, index, children }) {
   const suffix = index > 0 ? "-" + (index + 1) : "";
   return (
     <div className="field-subset-container">
@@ -64,7 +60,7 @@ function Subset({ isSubmitted, fields, deleteBtn, index }) {
           isSubmitted={isSubmitted}
         ></InputField>
       ))}
-      {deleteBtn}
+      {children}
     </div>
   );
 }
