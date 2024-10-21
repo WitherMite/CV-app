@@ -7,7 +7,7 @@ export default function FormControl({
   onChange,
 }) {
   switch (inputType) {
-    // add more cases as needed, would be a waste of time otherise I think
+    // add more cases as needed, would be a waste of time otherwise I think
     case "textarea":
       return (
         <textarea

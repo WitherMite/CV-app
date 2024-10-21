@@ -18,17 +18,91 @@
         "type": "email",
         "name": "email",
         "defaultValue": ""
+      },
+      {
+        "id": 5,
+        "label": "Phone number:",
+        "inputId": "genInfoPhone",
+        "type": "tel",
+        "name": "phone",
+        "defaultValue": ""
       }
     ]
   },
   {
     "id": 1,
     "title": "Education",
-    "fields": []
+    "fields": [
+      {
+        "id": 6,
+        "label": "School:",
+        "inputId": "eduSchool",
+        "type": "text",
+        "name": "school",
+        "defaultValue": ""
+      },
+      {
+        "id": 7,
+        "label": "Degree:",
+        "inputId": "eduMajor",
+        "type": "text",
+        "name": "major",
+        "defaultValue": ""
+      },
+      {
+        "id": 8,
+        "label": "Date of completion:",
+        "inputId": "eduCompleted",
+        "type": "date",
+        "name": "schoolCompletion",
+        "defaultValue": ""
+      }
+    ]
   },
   {
     "id": 2,
     "title": "Work Experience",
-    "fields": []
+    "fields": [
+      {
+        "id": 9,
+        "label": "Company:",
+        "inputId": "workCompany",
+        "type": "text",
+        "name": "jobCompany",
+        "defaultValue": ""
+      },
+      {
+        "id": 10,
+        "label": "Title:",
+        "inputId": "workTitle",
+        "type": "text",
+        "name": "jobTitle",
+        "defaultValue": ""
+      },
+      {
+        "id": 11,
+        "label": "Responsibilities:",
+        "inputId": "workTasks",
+        "type": "textarea",
+        "name": "jobTasks",
+        "defaultValue": ""
+      },
+      {
+        "id": 12,
+        "label": "Start date:",
+        "inputId": "workStart",
+        "type": "date",
+        "name": "jobStart",
+        "defaultValue": ""
+      },
+      {
+        "id": 13,
+        "label": "End date:",
+        "inputId": "workEnd",
+        "type": "date",
+        "name": "jobEnd",
+        "defaultValue": ""
+      }
+    ]
   }
 ]
