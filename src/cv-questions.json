@@ -2,9 +2,10 @@
   {
     "id": 0,
     "title": "General Info",
+    "repeatable": false,
     "fields": [
       {
-        "id": 3,
+        "id": 0,
         "label": "Name:",
         "inputId": "genInfoName",
         "type": "text",
@@ -12,7 +13,7 @@
         "defaultValue": ""
       },
       {
-        "id": 4,
+        "id": 1,
         "label": "Email:",
         "inputId": "genInfoEmail",
         "type": "email",
@@ -20,7 +21,7 @@
         "defaultValue": ""
       },
       {
-        "id": 5,
+        "id": 2,
         "label": "Phone number:",
         "inputId": "genInfoPhone",
         "type": "tel",
@@ -32,9 +33,10 @@
   {
     "id": 1,
     "title": "Education",
+    "repeatable": true,
     "fields": [
       {
-        "id": 6,
+        "id": 0,
         "label": "School:",
         "inputId": "eduSchool",
         "type": "text",
@@ -42,7 +44,7 @@
         "defaultValue": ""
       },
       {
-        "id": 7,
+        "id": 1,
         "label": "Degree:",
         "inputId": "eduMajor",
         "type": "text",
@@ -50,7 +52,7 @@
         "defaultValue": ""
       },
       {
-        "id": 8,
+        "id": 2,
         "label": "Date of completion:",
         "inputId": "eduCompleted",
         "type": "date",
@@ -62,9 +64,10 @@
   {
     "id": 2,
     "title": "Work Experience",
+    "repeatable": true,
     "fields": [
       {
-        "id": 9,
+        "id": 0,
         "label": "Company:",
         "inputId": "workCompany",
         "type": "text",
@@ -72,7 +75,7 @@
         "defaultValue": ""
       },
       {
-        "id": 10,
+        "id": 1,
         "label": "Title:",
         "inputId": "workTitle",
         "type": "text",
@@ -80,7 +83,7 @@
         "defaultValue": ""
       },
       {
-        "id": 11,
+        "id": 2,
         "label": "Responsibilities:",
         "inputId": "workTasks",
         "type": "textarea",
@@ -88,7 +91,7 @@
         "defaultValue": ""
       },
       {
-        "id": 12,
+        "id": 3,
         "label": "Start date:",
         "inputId": "workStart",
         "type": "date",
@@ -96,7 +99,7 @@
         "defaultValue": ""
       },
       {
-        "id": 13,
+        "id": 4,
         "label": "End date:",
         "inputId": "workEnd",
         "type": "date",

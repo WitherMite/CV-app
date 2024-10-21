@@ -24,6 +24,7 @@ export default function CvApp({
           key={section.id}
           fields={section.fields}
           title={section.title}
+          repeatable={section.repeatable}
           isSubmitted={isSubmitted}
         ></FormSection>
       ))}
