@@ -19,6 +19,7 @@ export default function CvApp({
         submitCallback(e.target);
       }}
     >
+      <p className="disclaimer">Never enter personal info to random forms.</p>
       {structureConfig.map((section) => (
         <FormSection
           key={section.id}

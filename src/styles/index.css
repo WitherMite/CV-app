@@ -22,6 +22,13 @@ body {
 
 .cv-app {
   padding: 1.5rem;
+  max-width: 600px;
+}
+
+.disclaimer {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 0.75rem;
 }
 
 .form-buttons {
@@ -50,6 +57,15 @@ button {
   border-radius: 4px;
 }
 
+fieldset button {
+  box-sizing: content-box;
+  width: 1ch;
+}
+
+fieldset button:disabled {
+  display: none;
+}
+
 .field-subset-container {
   margin-bottom: 0.75rem;
   padding-top: 0.75rem;
@@ -58,4 +74,39 @@ button {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.5rem;
+}
+
+.input-field,
+.disabled-input-field {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+label,
+fieldset h3 {
+  width: 18ch;
+}
+
+input,
+textarea {
+  flex: 1 1 auto;
+  border: 2px solid var(--font-color);
+  border-radius: 4px;
+}
+
+.disabled-input-field h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.disabled-input-field p {
+  flex: 1 1 auto;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-color);
 }

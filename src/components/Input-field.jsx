@@ -1,6 +1,5 @@
 import FormControl from "./Form-control.jsx";
 import { useState } from "react";
-import "../styles/input-field.css";
 
 //  creates a prop customizable label/form control pair
 // if submitted, field is hidden, disabled, and replaced with an element containing submitted info
@@ -15,7 +14,10 @@ export default function InputField({
   const [value, setValue] = useState(defaultValue);
   return (
     <>
-      <div className={"input-field" + (isSubmitted ? " hidden-field" : "")}>
+      <div
+        className="input-field"
+        style={isSubmitted ? { display: "none" } : {}}
+      >
         <label htmlFor={inputId}>{labelText}</label>
         <FormControl
           inputId={inputId}
