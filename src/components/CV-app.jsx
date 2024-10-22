@@ -28,14 +28,16 @@ export default function CvApp({
           isSubmitted={isSubmitted}
         ></FormSection>
       ))}
-      <button className="submit-cv">Submit</button>
-      <button
-        className="edit-cv"
-        type="button"
-        onClick={() => setIsSubmitted(false)}
-      >
-        Edit
-      </button>
+      <div className="form-buttons">
+        <button className="submit-cv">Submit</button>
+        <button
+          className="edit-cv"
+          type="button"
+          onClick={() => setIsSubmitted(false)}
+        >
+          Edit
+        </button>
+      </div>
     </form>
   );
 }
